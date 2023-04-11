@@ -4,7 +4,11 @@ export default class UsersController {
 
     public async show({view}: HttpContextContract){
 
-        return view.render('welcome')
+        let resp = await fetch("https://randomuser.me/api?results=10")
+        let {results} = await resp.json()
+        let users = results
+
+        return view.render('welcome', users)
     }
 
 }
