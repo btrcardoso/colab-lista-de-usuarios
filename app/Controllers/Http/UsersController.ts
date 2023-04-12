@@ -8,7 +8,7 @@ export default class UsersController {
         let {results} = await resp.json()
         let users = results
 
-        return view.render('welcome', users)
+        return view.render('welcome', {users})
     }
 
 }

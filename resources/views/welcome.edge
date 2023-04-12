@@ -1,11 +1,57 @@
-<!doctype html>
-<html>
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  @entryPointStyles('app')
-</head>
-<body>
+@layout('layouts/main')
+@set('title', 'Users List')
+
+@section('body')
+
+  <div class="flex flex-row bg-base-300 overflow-x-auto w-full shadow-xl rounded-t-lg font-medium p-5">
+    <div class="basis-1/4"></div>
+    <div class="basis-1/4">
+      NAME
+    </div>
+    <div class="basis-1/2">
+      USERNAME
+    </div>
+  </div>
+
+  <div class="overflow-x-auto w-full shadow-xl rounded-lg font-medium">
+
+    @each(user in users)
+      <div tabindex="0" class="collapse collapse-arrow border border-base-200 bg-base-100">
+        <input type="checkbox" class="peer" />
+        <div class="collapse-title">
+          <div class="flex flex-row">
+            <div class="basis-1/4">
+              <img class="w-10 rounded-full rounded-full shadow-2xl h-12 w-12" src="{{user.picture.large}}" />
+            </div>
+            <div class="basis-1/4">
+              {{user.name.title}} {{user.name.first}} {{user.name.last}}
+            </div>
+            <div class="basis-1/2">
+              {{user.login.username}}
+            </div>
+          </div>
+        </div>
+        <div class="collapse-content">
+
+          <label class="font-medium">Age:</label> 
+          <label>{{user.dob.age}}</label> <br>
+
+          <label class="font-medium">Email:</label> 
+          <label>{{user.email}}</label> <br>
+
+          <label class="font-medium">Phone:</label> 
+          <label>{{user.phone}}</label> <br>
+
+          <label class="font-medium">Cell:</label> 
+          <label>{{user.cell}}</label> <br>
+
+          <label class="font-medium">Adress:</label> <br>
+          <label>{{user.location.street.number}} {{user.location.street.name}}</label><br>
+          <label>{{user.location.city}},  {{user.location.state}},  {{user.location.country}}</label><br>
+        </div>
+      </div>
+    @endeach
+
+  </div>
   
-</body>
-</html>
+@end
