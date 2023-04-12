@@ -1,0 +1,30 @@
+@layout('layouts/main')
+@set('title', 'User Details')
+
+@section('body')
+
+    <div class="relative bg-base-200 rounded-lg shadow-xl">
+        <div class="flex flex-col lg:flex-row">
+
+            <div class="flex flex-col p-4 items-center justify-center">
+                <!-- Picture -->
+                <img src="{{user.picture.large}}" class="max-w-sm rounded-full shadow-2xl w-60 h-60" />
+            </div>
+            
+            <div class="flex flex-col p-4 justify-center">
+                <!-- Info -->
+                <h1 class="text-5xl font-bold">{{user.name.title}} {{user.name.first}} {{user.name.last}}</h1>
+                <p class="italic">{{'@'}}{{ user.login.username }} </p>
+                <label class="font-medium">Age: {{user.dob.age}}</label> 
+                <label class="font-medium">Phone: {{user.phone}}</label> 
+                <label class="font-medium">Cell: {{user.cell}}</label> 
+                <label class="font-medium">Adress:</label>
+                <label>{{user.location.street.number}} {{user.location.street.name}}</label>
+                <label>{{user.location.city}},  {{user.location.state}},  {{user.location.country}}</label>
+            </div>
+
+        </div>
+
+    </div>
+
+@end

@@ -58,6 +58,13 @@
           <label class="font-medium">Adress:</label> <br>
           <label>{{user.location.street.number}} {{user.location.street.name}}</label><br>
           <label>{{user.location.city}},  {{user.location.state}},  {{user.location.country}}</label><br>
+
+          <div>
+            <a href="/{{user.login.username}}" class="btn btn-link">
+              MORE DETAILS
+            </a>
+          </div>
+          
         </div>
 
       </div>
