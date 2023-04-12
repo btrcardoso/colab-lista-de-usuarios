@@ -46,18 +46,23 @@
         {{--  Collapse Content  --}}
         <div class="collapse-content">
 
-          <label class="font-medium">Age:</label> 
-          <label>{{user.dob.age}}</label> <br>
+          <div>
+            <label class="font-medium">Age:</label> 
+            <label>{{user.dob.age}}</label> <br>
 
-          <label class="font-medium">Phone:</label> 
-          <label>{{user.phone}}</label> <br>
+            <label class="font-medium">Phone:</label> 
+            <label>{{user.phone}}</label> <br>
 
-          <label class="font-medium">Cell:</label> 
-          <label>{{user.cell}}</label> <br>
+            <label class="font-medium">Cell:</label> 
+            <label>{{user.cell}}</label> <br>
+          </div>
 
-          <label class="font-medium">Adress:</label> <br>
-          <label>{{user.location.street.number}} {{user.location.street.name}}</label><br>
-          <label>{{user.location.city}},  {{user.location.state}},  {{user.location.country}}</label><br>
+          <div class="text-start">
+            <a href="/{{user.login.username}}" class="btn btn-link">
+              MORE DETAILS
+            </a>
+          </div>
+          
         </div>
 
       </div>
