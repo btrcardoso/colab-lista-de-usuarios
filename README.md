@@ -33,14 +33,15 @@ Para a criação das branchs e commits, foi utilizado o padrão fornecido pelo a
 
 - ```feat```: para features adicionadas ao projeto.
 - ```docs```: para mudanças na documentação do projeto.
+- ```refactor```: para refatorações no projeto.
 
 ## Executar
 
 Para executar localmente em sua máquina:
 
-1. Clone os arquivos deste repositório.
+1. Configure um ambiente de desenvolvimento [Node](https://nodejs.org/en) (v18.15.0 ou superior) e clone os arquivos deste repositório em seu computador.
 2. Crie um arquivo ```.env``` e cole o conteúdo de ```.env.example``` nele.
-3. Instale os dependências da aplicação com o seguinte comando no terminal:
+3. Instale as dependências da aplicação com o seguinte comando no terminal:
 ```bash
 npm install
 ```
@@ -48,7 +49,7 @@ npm install
 ```bash
 npm run dev #node ace serve --watch
 ```
-5. Em seu navegador, cole a seguinte URL: http://127.0.0.1:3333
+5. Em seu navegador, cole a seguinte URL: http://127.0.0.1:3333 para ver a aplicação
 
 ## Minhas considerações
 
