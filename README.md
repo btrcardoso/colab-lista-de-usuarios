@@ -11,7 +11,7 @@ Para esta aplicação foram utilzadas as seguintes tecnologias:
 
 ## Organização do projeto
 
-O FrameWork Back-End AdonisJS permite o uso do padrão MVC (_Model_, _View_ e _Controller_) para construir o sistema. Aqui, foram utilizados os componentes _Controllers_ e _Views_. O _AdonisRouter_ é responsável por lidar com as requisições HTTP, passando-as para o _Controller_. O componente _Models_ não foi utilizado, pois não foi realiazado um acesso a um Banco de Dados (os dados foram consumidos pela _API_).
+O FrameWork Back-End AdonisJS permite o uso do padrão [MVC](https://legacy.adonisjs.com/docs/3.2/mvc-pattern) (_Model_, _View_ e _Controller_) para construir o sistema. Aqui, foram utilizados os componentes _Controllers_ e _Views_. O _AdonisRouter_ é responsável por lidar com as requisições HTTP, passando-as para o _Controller_. O componente _Models_ não foi utilizado, pois não foi realiazado um acesso a um Banco de Dados (os dados foram consumidos pela _API_).
 
 ![](https://res.cloudinary.com/adonisjs/image/upload/v1472842310/MVC-Flow-Chart_ccz2zb.jpg)
 
@@ -21,7 +21,7 @@ As rotas estão definidas em ```start/routes.ts```. Uma única rota foi criada p
 
 - _Views_
 
-Na pasta ```resources/views``` encontram-se os arquivos de HiperTexto em ```.edge``` da aplicação. Foi utilizado o plugin CSS DaisyUI baseado em Tailwind para a criação dos componentes HTML e CSS. O arquivo ```welcome.edge``` possui a _section_ com a listagem de usuários. Na pasta ````layouts```, encontra-se o arquivo de _layout_ para a página ```main.edge```. 
+Na pasta ```resources/views``` encontram-se os arquivos de HiperTexto em ```.edge``` da aplicação. Foi utilizado o plugin CSS DaisyUI baseado em Tailwind para a criação dos componentes HTML e CSS. O arquivo ```welcome.edge``` possui a _section_ com a listagem de usuários. Na pasta ```layouts```, encontra-se o arquivo de _layout_ para a página ```main.edge```. 
 
 ## Padrões de Commits
 
@@ -32,7 +32,7 @@ Para a criação das branchs e commits, foi utilizado o padrão fornecido pelo a
 
 ## Executar
 
-Para executar localmente em sua máquina
+Para executar localmente em sua máquina:
 
 1. Clone os arquivos deste repositório.
 2. Crie um arquivo ```.env``` e cole o conteúdo de ```.env.example``` nele.
