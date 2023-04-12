@@ -3,56 +3,66 @@
 
 @section('body')
 
-<div class="flex flex-row bg-base-300 overflow-x-auto w-full shadow-xl rounded-t-lg font-medium p-5">
-  <div class="flex-none basis-1/6 truncate"></div>
-  <div class="flex-none basis-1/4 truncate">
-    NAME
+  {{--  Title of Users' table  --}}
+  <div class="flex flex-row bg-base-300 overflow-x-auto w-full shadow-xl rounded-t-lg font-medium p-5">
+    <div class="flex-none basis-1/6 truncate"></div>
+    <div class="flex-none basis-1/4 truncate">
+      NAME
+    </div>
+    <div class="flex-none basis-1/4 truncate">
+      USERNAME
+    </div>
+    <div class="flex-none basis-1/4 truncate">
+      EMAIL
+    </div>
   </div>
-  <div class="flex-none basis-1/4 truncate">
-    USERNAME
-  </div>
-  <div class="flex-none basis-1/4 truncate">
-    EMAIL
-  </div>
-</div>
 
-<div class="overflow-x-auto w-full shadow-xl rounded-lg">
-  @each(user in users)
-    <div tabindex="0" class="collapse collapse-arrow border border-base-200 bg-base-100">
-      <input type="checkbox" class="peer" />
-      <div class="collapse-title">
-        <div class="flex flex-row">
-          <div class="flex-none basis-1/6 truncate">
-            <img class="w-10 rounded-full rounded-full shadow-2xl h-12 w-12" src="{{user.picture.large}}" />
-          </div>
-          <div class="flex-none basis-1/4 truncate">
-            {{user.name.title}} {{user.name.first}} {{user.name.last}}
-          </div>
-          <div class="flex-none basis-1/4 truncate">
-            {{user.login.username}}
-          </div>
-          <div class="flex-none basis-1/4 truncate">
-            {{user.email}}
+  {{--  Content of Users' Table  --}}
+  <div class="overflow-x-auto w-full shadow-xl rounded-lg">
+    @each(user in users)
+      <div tabindex="0" class="collapse collapse-arrow border border-base-200 bg-base-100">
+
+        {{--  Checkbox  --}}
+        <input type="checkbox" class="peer" />
+
+        {{--  Collapse Title  --}}
+        <div class="collapse-title">
+          <div class="flex flex-row">
+            <div class="flex-none basis-1/6 truncate">
+              <img class="w-10 rounded-full rounded-full shadow-2xl h-12 w-12" src="{{user.picture.large}}" />
+            </div>
+            <div class="flex-none basis-1/4 truncate">
+              {{user.name.title}} {{user.name.first}} {{user.name.last}}
+            </div>
+            <div class="flex-none basis-1/4 truncate">
+              {{user.login.username}}
+            </div>
+            <div class="flex-none basis-1/4 truncate">
+              {{user.email}}
+            </div>
           </div>
         </div>
+
+        {{--  Collapse Content  --}}
+        <div class="collapse-content">
+
+          <label class="font-medium">Age:</label> 
+          <label>{{user.dob.age}}</label> <br>
+
+          <label class="font-medium">Phone:</label> 
+          <label>{{user.phone}}</label> <br>
+
+          <label class="font-medium">Cell:</label> 
+          <label>{{user.cell}}</label> <br>
+
+          <label class="font-medium">Adress:</label> <br>
+          <label>{{user.location.street.number}} {{user.location.street.name}}</label><br>
+          <label>{{user.location.city}},  {{user.location.state}},  {{user.location.country}}</label><br>
+        </div>
+
       </div>
-      <div class="collapse-content">
+    @endeach
 
-        <label class="font-medium">Age:</label> 
-        <label>{{user.dob.age}}</label> <br>
-
-        <label class="font-medium">Phone:</label> 
-        <label>{{user.phone}}</label> <br>
-
-        <label class="font-medium">Cell:</label> 
-        <label>{{user.cell}}</label> <br>
-
-        <label class="font-medium">Adress:</label> <br>
-        <label>{{user.location.street.number}} {{user.location.street.name}}</label><br>
-        <label>{{user.location.city}},  {{user.location.state}},  {{user.location.country}}</label><br>
-      </div>
-    </div>
-  @endeach
-</div>
+  </div>
 
 @end

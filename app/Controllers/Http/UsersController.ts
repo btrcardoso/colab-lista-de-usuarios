@@ -2,7 +2,7 @@ import type { HttpContextContract } from '@ioc:Adonis/Core/HttpContext'
 
 export default class UsersController {
 
-    public async show({view}: HttpContextContract){
+    public async show({view, request}: HttpContextContract){
 
         let resp = await fetch("https://randomuser.me/api?results=10")
         let {results} = await resp.json()
