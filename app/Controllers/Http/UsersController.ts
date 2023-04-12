@@ -13,6 +13,9 @@ export default class UsersController {
 
     public async show({view, params}: HttpContextContract){
 
+        // simulates searching for a user with the username brought by the params.username
+        // The api won't necessarily bring the same user as it brings random users
+
         let resp = await fetch(`https://randomuser.me/api/`)
         let {results} = await resp.json()
         let user = results[0]
