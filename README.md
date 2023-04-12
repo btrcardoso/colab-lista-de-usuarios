@@ -45,3 +45,7 @@ npm install
 npm run dev #node ace serve --watch
 ```
 5. Em seu navegador, cole a seguinte URL: http://127.0.0.1:3333
+
+## Minhas considerações
+
+Este projeto foi uma ótima oportunidade de praticar e demonstrar como funciona o meu processo de pensamento para construir um WebSite. Utilizei frameworks em que já estou familiarizada e usando para outros projetos paralelamente. Foi uma aplicação simples e tranquila de fazer, e também foi gratificante vê-la funcionando.
